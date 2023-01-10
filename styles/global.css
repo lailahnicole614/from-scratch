@@ -33,3 +33,14 @@ header .logo {
 main {
     padding: 20px;
 }
+
+.hiding-spots {
+    height: 300px;
+    display: flex;
+}
+
+.hiding-spot {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
