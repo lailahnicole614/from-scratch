@@ -8,7 +8,8 @@ const kanyeContainer = document.getElementById('kanye-container');
 const peteContainer = document.getElementById('pete-container');
 const doctorContainer = document.getElementById('doctor-container');
 
-const correctGuessesEL = document.getElementById('wins');
+const correctGuessesEl = document.getElementById('wins');
+console.log(correctGuessesEl);
 const incorrectGuessesEl = document.getElementById('losses');
 const totalGuessesEl = document.getElementById('total');
 
@@ -39,6 +40,26 @@ function getRandomHidingSpot() {
     const index = Math.floor(Math.random() * places.length);
     const correctSpot = places[index];
     return correctSpot;
+}
+
+function handleGuess(userGuess, correctSpot) {
+    kanyeContainer.classList.remove('face');
+    peteContainer.classList.remove('face');
+    doctorContainer.classList.remove('face');
+
+    totalGuesses++;
+
+    const correctHidingSpot = document.getElementById(`${correctSpot}-container`);
+
+    correctHidingSpot.classList.add('face');
+
+    if (userGuess === correctSpot) {
+        correctGuesses++;
+    }
+
+    totalGuessesEl.textContent = totalGuesses;
+    correctGuessesEl.textContent = correctGuesses;
+    incorrectGuessesEl.textContent = totalGuesses - correctGuesses;
 }
 
 // (don't forget to call any display functions you want to run on page load!)
