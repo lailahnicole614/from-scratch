@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/KimK.png" alt="logo" />
+            <h1>Who Is Kim Dating?</h1>
+        </header>
 
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <h1 id="h1">Guess Who Kim is With!</h1> 
+            <br>
+            <br>
+            <div class="hiding-spots">
+                <div id="kanye-container" class="hiding-spot">
+                    <button id="kanye-button">Kanye</button>
+                    <img src="./assets/Kanye West.jpeg" class="hiding-img" />
+                </div>
+                <div id="pete-container" class="hiding-spot">
+                    <button id="pete-button">Pete</button>
+                    <img src="./assets/pete.jpeg" class="hiding-img" />
+                </div>
+                <div id="doctor-container" class="hiding-spot">
+                    <button id="doctor-button">Doctor</button>
+                    <img src="./assets/doctor.png" class="hiding-img" />
+                </div>
+                <br>
+                <br>
+                <div>
+                    <div>
+                        <div>You chose the right guy <span id="wins"> 0 </span> times </div>
+                        <div>and chose the wrong one <span id="losses"> 0 </span> times </div>
+                        <div>out of <span id="total"> 0 </span> games </div>
+                    </div>
+                </div>
+        </main>
+    </body>
 </html>

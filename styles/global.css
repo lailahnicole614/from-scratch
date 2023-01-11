@@ -1,5 +1,5 @@
 :root {
-    --background: rgb(224, 234, 247);
+    --background: #fdbaf2;
     --header-background: rgb(254, 251, 245);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -32,4 +32,29 @@ header .logo {
 
 main {
     padding: 20px;
+}
+
+.hiding-spots {
+    height: 300px;
+    display: flex;
+}
+
+.hiding-spot {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hiding-img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.kim::after {
+    font-size: 8rem;
+    content: '👰🏻‍♀️';
+    position: relative;
 }
