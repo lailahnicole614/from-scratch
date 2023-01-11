@@ -53,8 +53,8 @@ main {
     margin: 10px;
 }
 
-.face::after {
+.kim::after {
     font-size: 8rem;
     content: '👰🏻‍♀️';
-    position: absolute;
+    position: relative;
 }

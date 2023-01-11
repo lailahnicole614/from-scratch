@@ -20,17 +20,17 @@ let totalGuesses = 0;
 /* Events */
 kanyeButtonEl.addEventListener('click', () => {
     const correctSpot = getRandomHidingSpot();
-    handleGuess('kanye', correctSpot);
+    displayResults('kanye', correctSpot);
 });
 
 peteButtonEl.addEventListener('click', () => {
     const correctSpot = getRandomHidingSpot();
-    handleGuess('pete', correctSpot);
+    displayResults('pete', correctSpot);
 });
 
 doctorButtonEl.addEventListener('click', () => {
     const correctSpot = getRandomHidingSpot();
-    handleGuess('doctor', correctSpot);
+    displayResults('doctor', correctSpot);
 });
 /* Display Functions */
 
@@ -42,16 +42,16 @@ function getRandomHidingSpot() {
     return correctSpot;
 }
 
-function handleGuess(userGuess, correctSpot) {
-    kanyeContainer.classList.remove('face');
-    peteContainer.classList.remove('face');
-    doctorContainer.classList.remove('face');
+function displayResults(userGuess, correctSpot) {
+    kanyeContainer.classList.remove('kim');
+    peteContainer.classList.remove('kim');
+    doctorContainer.classList.remove('kim');
 
     totalGuesses++;
 
-    const correctHidingSpot = document.getElementById(`${correctSpot}-container`);
+    const resetFunction = document.getElementById(`${correctSpot}-container`);
 
-    correctHidingSpot.classList.add('face');
+    resetFunction.classList.add('kim');
 
     if (userGuess === correctSpot) {
         correctGuesses++;
