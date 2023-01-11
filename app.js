@@ -22,6 +22,23 @@ kanyeButtonEl.addEventListener('click', () => {
     handleGuess('kanye', correctSpot);
 });
 
+peteButtonEl.addEventListener('click', () => {
+    const correctSpot = getRandomHidingSpot();
+    handleGuess('pete', correctSpot);
+});
+
+doctorButtonEl.addEventListener('click', () => {
+    const correctSpot = getRandomHidingSpot();
+    handleGuess('doctor', correctSpot);
+});
 /* Display Functions */
+
+function getRandomHidingSpot() {
+    const places = ['kanye', 'pete', 'doctor'];
+
+    const index = Math.floor(Math.random() * places.length);
+    const correctSpot = places[index];
+    return correctSpot;
+}
 
 // (don't forget to call any display functions you want to run on page load!)
