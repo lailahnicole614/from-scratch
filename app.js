@@ -9,7 +9,6 @@ const peteContainer = document.getElementById('pete-container');
 const doctorContainer = document.getElementById('doctor-container');
 
 const correctGuessesEl = document.getElementById('wins');
-console.log(correctGuessesEl);
 const incorrectGuessesEl = document.getElementById('losses');
 const totalGuessesEl = document.getElementById('total');
 
